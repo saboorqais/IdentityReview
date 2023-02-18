@@ -19,9 +19,9 @@ function App() {
         <>
 
             <HeaderMain/>
-            <Grid ml={80} mr={80} >
-                <Grid.Col span={10}>
-                    <Group>
+
+
+                    <Group ml={180} mr={180}>
                         <CardHeading/>
                         <Viewable/>
                         <Experience/>
@@ -29,9 +29,6 @@ function App() {
                         <LiscenseCertifications/>
                     </Group>
 
-                </Grid.Col>
-
-            </Grid>
 
 
         </>
