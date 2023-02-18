@@ -40,7 +40,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 const data = {
-    "title": "Experience",
+    "title": "Liscense & Certifications",
     "description": "",
     "data": [
         {
