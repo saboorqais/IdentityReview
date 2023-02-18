@@ -4,6 +4,7 @@ import {EducationCard} from "./ExperienceCard/EducationCard.jsx";
 
 const useStyles = createStyles((theme) => ({
     card: {
+        width:"100%",
         backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
     },
 
@@ -46,16 +47,7 @@ const data = {
         {
             "title": "Messages",
             "description": "Direct messages you have received from other users"
-        },
-        {
-            "title": "Review requests",
-            "description": "Code review requests from your team members"
-        },
-
-        {
-            "title": "Review requests",
-            "description": "Code review requests from your team members"
-        },
+        }
 
 
     ]
@@ -86,7 +78,7 @@ export function Education({}) {
                 <Title size="xl" className={classes.title} weight={500}>
                     {data.title}
                 </Title>
-                <Grid gutter={5} gutterXs="md" gutterMd="xl" gutterXl={15}>
+                <Grid  gutter={5} gutterXs="md" gutterMd="xl" gutterXl={15}>
                     {items}
                 </Grid>
 

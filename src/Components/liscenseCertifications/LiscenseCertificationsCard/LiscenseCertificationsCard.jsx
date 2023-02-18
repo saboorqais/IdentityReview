@@ -10,7 +10,7 @@ import {
     Popover,
     Button,
     Loader,
-    Container
+    Container, Flex
 } from '@mantine/core';
 import {Icon} from '@iconify/react';
 import {useDisclosure} from "@mantine/hooks";
@@ -67,29 +67,29 @@ export function LiscenseCertificationsCard({verified}) {
                 <Group spacing="xs">
 
 
-                    <Text size="xs" color="dimmed" weight={500}>
-                        <strong>Issued: </strong> {data.from_date}  </Text>
+                    <Text size="sm" color="dimmed" weight={700}>
+                        Issued:  {data.from_date}  </Text>
 
 
 
                 </Group>
-                <Group spacing="xs">
-                    <Text size="xs" color="dimmed" weight={500}>
-                   <strong> Expiry:</strong>    {data.to_date}
+                <Group spacing="">
+                    <Text size="sm" color="dimmed" weight={700}>
+                    Expiry:  {data.to_date}
                     </Text>
 
 
 
 
                 </Group>
-                <Text transform="uppercase" color="dimmed" weight={700} size="xs">
+                <Text transform="uppercase" color="dimmed" weight={700} size="sm">
                     {data.organization}
                 </Text>
-                <Group spacing="xs" width={300}>
+                <Group spacing="" width={300}>
 
                     <Popover withinPortal position="bottom" withArrow shadow="md" opened={opened}>
                         <Popover.Target>
-                            <Text size="xs" color="dimmed" truncate onMouseEnter={open} onMouseLeave={close}>
+                            <Text size="xs" color="dimmed" truncate onMouseEnter={open} onMouseLeave={close}  size="sm">
                                 0xb7bcfea0af6f76d5219d024bde453ccb102c47d18256efabbd4d5ea3471369b7
                             </Text>
                         </Popover.Target>
@@ -101,10 +101,13 @@ export function LiscenseCertificationsCard({verified}) {
                     </Popover>
 
                 </Group>
-                {verified?
-                    <Button  color={"teal"} radius="xl" size="xs" compact uppercase>
-                        Verify
-                    </Button>:""}
+                <Flex justify={"flex-end"}>
+                    {verified?
+                        <Button  color={"teal"}  size="sm" compact uppercase>
+                            Verify
+                        </Button>:""}
+
+                </Flex>
 
 
             </div>

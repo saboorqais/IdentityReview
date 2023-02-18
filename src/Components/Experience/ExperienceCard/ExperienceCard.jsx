@@ -57,22 +57,22 @@ export function ExperienceCard({verified}) {
                 <Group noWrap spacing="xs">
 
 
-                    <Text size="xs" color="dimmed">
+                    <Text size="sm" color="dimmed" weight={700}>
                         {data.from_date}
                     </Text>
                     -
-                    <Text size="xs" color="dimmed">
+                    <Text size="sm" color="dimmed" weight={700}>
                         {data.to_date}
                     </Text>
                 </Group>
-                <Text transform="uppercase" color="dimmed" weight={700} size="xs">
+                <Text transform="uppercase" color="dimmed" weight={700} size="sm">
                     {data.organization}
                 </Text>
                 <Group spacing="xs" width={300}>
 
                     <Popover withinPortal position="bottom" withArrow shadow="md" opened={opened}>
                         <Popover.Target>
-                            <Text size="xs" color="dimmed" truncate onMouseEnter={open} onMouseLeave={close}>
+                            <Text size="sm" color="dimmed" truncate onMouseEnter={open} onMouseLeave={close} >
                                 0xb7bcfea0af6f76d5219d024bde453ccb102c47d18256efabbd4d5ea3471369b7
                             </Text>
                         </Popover.Target>

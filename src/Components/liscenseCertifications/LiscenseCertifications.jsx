@@ -3,6 +3,7 @@ import {LiscenseCertificationsCard} from "./LiscenseCertificationsCard/LiscenseC
 
 const useStyles = createStyles((theme) => ({
     card: {
+        width:"100%",
         backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
     },
 
@@ -46,19 +47,7 @@ const data = {
         {
             "title": "Messages",
             "description": "Direct messages you have received from other users"
-        },
-        {
-            "title": "Review requests",
-            "description": "Code review requests from your team members"
-        },
-        {
-            "title": "Review requests",
-            "description": "Code review requests from your team members"
-        },
-        {
-            "title": "Review requests",
-            "description": "Code review requests from your team members"
-        },
+        }
 
     ]
 }
