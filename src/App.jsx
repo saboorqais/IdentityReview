@@ -1,27 +1,43 @@
-import {useState} from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 import {HeaderMain} from "./Components/Header/Header.jsx";
-import {Box, Container, Flex} from "@mantine/core";
+import {Grid, Group} from "@mantine/core";
 import CardHeading from "./Components/CardHeading/CardHeading.jsx";
-import {TableContent} from "./Components/TableOfContent/TableContent.jsx";
+import Viewable from "./Components/Viewable/Viewable.jsx";
+import {Analytics} from "./Components/Analytics/Analytics.jsx";
+import {Experience} from "./Components/Experience/Experience.jsx";
+import {Education} from "./Components/Education/Education.jsx";
+import {
+    LiscenseCertifications,
+} from "./Components/liscenseCertifications/LiscenseCertifications.jsx";
+
 
 function App() {
 
 
     return (
 
-<>
-    <HeaderMain/>
-    <Box display={"flex"}>
-        <CardHeading/>
+        <>
 
-    </Box>
-    <TableContent/>
-</>
+            <HeaderMain/>
+            <Grid ml={80} mr={80} >
+                <Grid.Col span={10}>
+                    <Group>
+                        <CardHeading/>
+                        <Viewable/>
+                        <Experience/>
+                        <Education/>
+                        <LiscenseCertifications/>
+                    </Group>
+
+                </Grid.Col>
+
+            </Grid>
 
 
-)
+        </>
+
+
+    )
 }
 
 export default App

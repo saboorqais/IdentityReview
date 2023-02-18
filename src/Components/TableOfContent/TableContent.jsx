@@ -9,8 +9,13 @@ import {
     IconDatabaseImport,
     IconReceipt2,
     IconSwitchHorizontal,
-    IconLogout,
-} from '@tabler/icons';
+    IconLogout
+} from '@tabler/icons'
+
+import {BsPerson} from "react-icons/bs";
+import {GrCertificate} from "react-icons/gr";
+import {BsBriefcase} from "react-icons/bs";
+import {MdOutlineCastForEducation} from "react-icons/md";
 import MantineLogo from '../../assets/mantineLogo.svg';
 
 const useStyles = createStyles((theme, _params, getRef) => {
@@ -57,6 +62,8 @@ const useStyles = createStyles((theme, _params, getRef) => {
             ref: icon,
             color: theme.colorScheme === 'dark' ? theme.colors.dark[2] : theme.colors.gray[6],
             marginRight: theme.spacing.sm,
+            width: "20px",
+            height: "20px"
         },
 
         linkActive: {
@@ -73,13 +80,13 @@ const useStyles = createStyles((theme, _params, getRef) => {
 });
 
 const data = [
-    {link: '', label: 'Notifications', icon: IconBellRinging},
-    {link: '', label: 'Billing', icon: IconReceipt2},
-    {link: '', label: 'Security', icon: IconFingerprint},
-    {link: '', label: 'SSH Keys', icon: IconKey},
-    {link: '', label: 'Databases', icon: IconDatabaseImport},
-    {link: '', label: 'Authentication', icon: Icon2fa},
-    {link: '', label: 'Other Settings', icon: IconSettings},
+    {link: '/about', label: 'About You', icon: BsPerson},
+    {link: '/education', label: 'Your Education', icon: MdOutlineCastForEducation},
+    {link: '/experience', label: 'Your Experience', icon: BsBriefcase},
+    {link: '/certifications', label: 'Your Certifications', icon: GrCertificate},
+    {link: '/skills', label: 'Your Skills', icon: IconKey},
+
+
 ];
 
 export function TableContent() {
@@ -103,12 +110,10 @@ export function TableContent() {
 
     return (
 
-        <Navbar height={700} width={{sm: 300}} p="md">
+        <Navbar maxWidth={300} height={700} width={{sm: 300}} p="md" >
             <Navbar.Section grow>
-
                 {links}
             </Navbar.Section>
-
 
         </Navbar>
 

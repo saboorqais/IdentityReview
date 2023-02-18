@@ -6,7 +6,7 @@ import {MantineProvider} from "@mantine/core";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <MantineProvider theme={{fontFamily: 'Open Sans',colorScheme:"light"}} withGlobalStyles withNormalizeCSS>
+        <MantineProvider theme={{fontFamily: 'Inter',colorScheme:"light"}} withGlobalStyles withNormalizeCSS>
             <App/>
         </MantineProvider>
     </React.StrictMode>,
