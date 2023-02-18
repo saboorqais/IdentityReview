@@ -83,7 +83,7 @@ export function Education({}) {
         </>
 
 
-    )) : (<Alert m={10} icon={<IconAlertCircle size={16}/>} title="No Data!" >
+    )) : (<Alert m={10} icon={<IconAlertCircle size={16}/>} title="No Data!" style={{width:"100%"}} >
         Kindly Add data
          <Anchor href="/">
             Click to go back
