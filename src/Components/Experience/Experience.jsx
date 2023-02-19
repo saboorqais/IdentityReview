@@ -1,5 +1,6 @@
 import {createStyles, Card, Group, Switch, Text, Title, Grid, Button, Box, Stack} from '@mantine/core';
 import {ExperienceCard} from "./ExperienceCard/ExperienceCard.jsx";
+import {useState} from "react";
 
 const useStyles = createStyles((theme) => ({
     card: {
@@ -40,28 +41,104 @@ const useStyles = createStyles((theme) => ({
 
 }));
 
-const data = {
-    "title": "Experience",
-    "description": "",
-    "data": [
-        {
-            "title": "Messages",
-            "description": "Direct messages you have received from other users"
-        },
 
-
-    ]
-}
 
 export function Experience({}) {
     const {classes} = useStyles();
+    const mainData = {
+        "title": "Experience",
+        "description": "",
+        "data": [
+            {
+                "image": "https://images.unsplash.com/photo-1602080858428-57174f9431cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+                "organization": "Facebook",
+                "title": "Software Engineer",
+                "from_date": "Feb 2019",
+                "to_date": "Feb 2021",
+                "address": "0xb7bcfea0af6f76d5219d024bde453ccb102c47d18256efabbd4d5ea3471369b7",
+                "author": {
+                    "name": "Elsa Brown",
+                    "avatar": "https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80"
+                }
+            }, {
+                "image": "https://images.unsplash.com/photo-1602080858428-57174f9431cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+                "organization": "Facebook",
+                "title": "Software Engineer",
+                "from_date": "Feb 2019",
+                "to_date": "Feb 2021",
+                "address": "0xb7bcfea0af6f76d5219d024bde453ccb102c47d18256efabbd4d5ea3471369b7",
+                "author": {
+                    "name": "Elsa Brown",
+                    "avatar": "https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80"
+                }
+            }, {
+                "image": "https://images.unsplash.com/photo-1602080858428-57174f9431cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+                "organization": "Facebook",
+                "title": "Software Engineer",
+                "from_date": "Feb 2019",
+                "to_date": "Feb 2021",
+                "address": "0xb7bcfea0af6f76d5219d024bde453ccb102c47d18256efabbd4d5ea3471369b7",
+                "author": {
+                    "name": "Elsa Brown",
+                    "avatar": "https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80"
+                }
+            }, {
+                "image": "https://images.unsplash.com/photo-1602080858428-57174f9431cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+                "organization": "Facebook",
+                "title": "Software Engineer",
+                "from_date": "Feb 2019",
+                "to_date": "Feb 2021",
+                "address": "0xb7bcfea0af6f76d5219d024bde453ccb102c47d18256efabbd4d5ea3471369b7",
+                "author": {
+                    "name": "Elsa Brown",
+                    "avatar": "https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80"
+                }
+            }, {
+                "image": "https://images.unsplash.com/photo-1602080858428-57174f9431cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+                "organization": "Facebook",
+                "title": "Software Engineer",
+                "from_date": "Feb 2019",
+                "to_date": "Feb 2021",
+                "address": "0xb7bcfea0af6f76d5219d024bde453ccb102c47d18256efabbd4d5ea3471369b7",
+                "author": {
+                    "name": "Elsa Brown",
+                    "avatar": "https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80"
+                }
+            }, {
+                "image": "https://images.unsplash.com/photo-1602080858428-57174f9431cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+                "organization": "Facebook",
+                "title": "Software Engineer",
+                "from_date": "Feb 2019",
+                "to_date": "Feb 2021",
+                "address": "0xb7bcfea0af6f76d5219d024bde453ccb102c47d18256efabbd4d5ea3471369b7",
+                "author": {
+                    "name": "Elsa Brown",
+                    "avatar": "https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80"
+                }
+            }, {
+                "image": "https://images.unsplash.com/photo-1602080858428-57174f9431cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+                "organization": "Facebook",
+                "title": "Software Engineer",
+                "from_date": "Feb 2019",
+                "to_date": "Feb 2021",
+                "address": "0xb7bcfea0af6f76d5219d024bde453ccb102c47d18256efabbd4d5ea3471369b7",
+                "author": {
+                    "name": "Elsa Brown",
+                    "avatar": "https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80"
+                }
+            },
 
-    const items = data.data.map((item) => (
+
+        ]
+    }
+   const [data ,setData]= useState([...mainData.data].slice(0,4))
+
+    const items = data.map((item) => (
         <>
 
             <Grid.Col span={6}>
 
-                    <ExperienceCard verified={true}/>
+                    <ExperienceCard data={item} verified={true}/>
 
 
             </Grid.Col>
@@ -87,9 +164,25 @@ export function Experience({}) {
 
                     <Box className={classes.show}>
 
-                        <Button fullWidth variant="light"  radius="md">
-                            CLick to see more
-                        </Button>
+                        {
+                            data.length===mainData.data.length?(
+                                <Button fullWidth variant="light"  radius="md"
+
+                                        onClick={()=>{
+                                            setData(mainData.data.slice(0,4))
+                                        }
+                                        }>
+                                    CLick to see less
+                                </Button>
+                            ):<Button fullWidth variant="light"  radius="md"
+
+                                      onClick={()=>{
+                                          setData(mainData.data)
+                                      }
+                                      }>
+                                CLick to see more
+                            </Button>
+                        }
                     </Box>
                 </Box>
             </Stack>
