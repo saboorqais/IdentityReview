@@ -1,7 +1,7 @@
 # IdentityReview
 
 
-#Simple Portfolio Page#
+# Simple Portfolio Page
 
 ![image](https://user-images.githubusercontent.com/62180086/225611090-c3645fdc-ae1a-46a3-a34c-5760b16ab223.png)
 
